@@ -29,17 +29,20 @@ import { Image } from 'astro:assets'
 
 	.letter-card > h2 {
 		margin: 0;
-		font-size: 5rem;
-		line-height: 5.5rem;
+		font-size: 6dvh;
+		line-height: 115%;
 		cursor: pointer;
+		z-index: 2;
 	}
 	.letter-card > p {
 		margin: 0;
 		cursor: pointer;
+		z-index: 2;
 	}
 
 	.letter-card > img {
 		position: absolute;
+		z-index: 1;
 	}
 
 	.letter-card >img.topRight {
@@ -62,8 +65,11 @@ import { Image } from 'astro:assets'
 <script>
 	const cards = document.querySelectorAll(".letter-card");
 	cards?.forEach((card) => {
+		let letterAudio = new Audio(card.dataset.audio);
 		card.addEventListener("click", function(){
-			new Audio(card.dataset.audio).play();
+			if (letterAudio.paused) {
+				letterAudio.play()
+			}
 		}) 
 	})
 </script>
