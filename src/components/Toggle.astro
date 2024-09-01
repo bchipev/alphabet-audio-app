@@ -1,0 +1,16 @@
+---
+interface Props {
+	language: string,
+	url: string,
+}
+
+const { language, url } = Astro.props;
+---
+
+<div class="language-toggle">
+    <ul>
+        <li class={language}></li>
+        <li class={language}></li>
+        <li class={language}></li>
+    </ul>
+</div>

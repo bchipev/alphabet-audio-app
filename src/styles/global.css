@@ -1,0 +1,54 @@
+:root {
+    --text-color: black;
+    --bgn-background: lightgreen;
+    --nld-background: lightblue;
+    --lit-background: lightyellow;
+    --bgn-flag-top-color: white;
+    --bgn-flag-middle-color: green;
+    --bgn-flag-bottom-color: red;
+    --nld-flag-top-color: red;
+    --nld-flag-middle-color: white;
+    --nld-flag-bottom-color: blue;
+    --lit-flag-top-color: yellow;
+    --lit-flag-middle-color: green;
+    --lit-flag-bottom-color: red;
+}
+
+@font-face {
+    font-family: 'ADYS';
+    src: url('../assets/fonts/ADYS-Bold.woff2') format('woff2'),
+        url('../assets/fonts/ADYS-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ADYS';
+    src: url('../assets/fonts/ADYS-Regular.woff2') format('woff2'),
+        url('../assets/fonts/ADYS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+html {
+    background-color: #f1f9f1;
+    font-family: "ADYS", sans-serif;
+  }
+  
+  body {
+    margin: 0
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+  
