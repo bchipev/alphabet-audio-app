@@ -65,11 +65,13 @@ import { Image } from 'astro:assets'
 <script>
 	const cards = document.querySelectorAll(".letter-card");
 	cards?.forEach((card) => {
-		let letterAudio = new Audio(card.dataset.audio);
-		card.addEventListener("click", function(){
-			if (letterAudio.paused) {
-				letterAudio.play()
-			}
-		}) 
+		if (card instanceof HTMLElement) {
+			let letterAudio = new Audio(card.dataset.audio);
+			card.addEventListener("click", function(){
+				if (letterAudio.paused) {
+					letterAudio.play()
+				}
+			})
+		}
 	})
 </script>
