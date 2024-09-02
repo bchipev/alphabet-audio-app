@@ -9,7 +9,7 @@ interface Props {
 	audioSrc: string,
 }
 
-const { letter, word, hiddenImage, imageSrc, imageAlt, imagePosition, audioSrc } = Astro.props;
+const { letter, word, hiddenImage=false, imageSrc, imageAlt, imagePosition, audioSrc } = Astro.props;
 
 import { Image } from 'astro:assets'
 ---
