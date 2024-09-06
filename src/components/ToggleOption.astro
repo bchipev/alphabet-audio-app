@@ -1,0 +1,35 @@
+---
+interface Props {
+	language: string,
+	url: string,
+    anchorText: string;
+    isActive:boolean;
+}
+
+const { language, url, anchorText, isActive } = Astro.props;
+---
+
+<li class={isActive ? "active" : ""}>
+    <a href={url}>{anchorText}</a>
+</li>
+
+<style>
+    li {
+        background-color: lightgrey;
+        padding: 0 1rem;
+        border: 1px solid grey;
+        border-radius: 1rem;
+    }
+
+    li.active {
+        background-color: transparent;
+    }
+
+    li > a {
+        text-decoration: none;
+        color: unset;
+    }
+    li > a:visited {
+        color: unset;
+    }
+</style>

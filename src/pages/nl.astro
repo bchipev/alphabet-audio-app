@@ -1,11 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import ToggleOption from '../components/ToggleOption.astro'
 import '../styles/global.css';
 ---
 
 <Layout title="Български интерактивен буквар">
 	<main>
+		<div class="language-selector-container">
+			<ul>
+				<ToggleOption language='bg' anchorText='български' isActive={false} url='/alphabet-audio-app/bg.html' />
+				<ToggleOption language='nl' anchorText='nederlands' isActive={true} url='/alphabet-audio-app/nl.html' />
+				<ToggleOption language='lt' anchorText='lietuvių' isActive={false} url='/alphabet-audio-app/lt.html' />
+			</ul>
+		</div>
 		<h1>Interactief nederlands alfabet</h1>
 		<p class="instructions">
 			Tik op een letter om de uitspraak te horen, evenals een voorbeeldwoord dat ermee begint.
@@ -182,7 +190,7 @@ import '../styles/global.css';
 			<Card
 				letter="Vv"
 				word="vlinder"
-				imageSrc="/alphabet-audio-app/assets/images/nl/23.butterfly.svg"
+				imageSrc="/alphabet-audio-app/assets/images/nl/22.butterfly.svg"
 				imageAlt="vlinder"
 				imagePosition="topRight"
 				audioSrc=""
@@ -190,7 +198,7 @@ import '../styles/global.css';
 			<Card
 				letter="Ww"
 				word="walvis"
-				imageSrc="/alphabet-audio-app/assets/images/nl/22.whale.svg"
+				imageSrc="/alphabet-audio-app/assets/images/nl/23.whale.svg"
 				imageAlt="walvis"
 				imagePosition="topRight"
 				audioSrc=""
